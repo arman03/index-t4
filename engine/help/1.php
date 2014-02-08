@@ -1,0 +1,6 @@
+<h1 class="wit bold">پشتیبانی</h1>
+<div class="support-row"> <a class="support-head spopcon" href="help.php?s=2" id="sup_ingame">تماس با پشتیبانی داخل بازی</a> <span style="color: black">اگر پاسخ سوال خود را پیدا نکردید می&zwnj;توانید از اینجا با پشتیبانی داخل بازی تماس بگیرید.</span></div>
+<div class="support-row"> <a class="support-head spopcon" href="./index.php#tutorial">تور بازی</a> <span style="color: black">در اینجا شما می&zwnj;توانید اطلاعات بیشتری در مورد بازی پیدا کنید.</span></div>
+<div class="support-row"> <a class="support-head spopcon" href="./index.php#spielregeln">قوانین بازی</a> <span style="color: black">در اینجا شما قادر به پیدا کردن قوانین فعلی بازی می&zwnj;باشید.</span></div>
+<div class="support-row"> <a class="support-head" href="http://t4.answers.travian.ir/" target="blank">سوالات متداول - پاسخ&zwnj;های تراوین</a> <span style="color: black">در اینجا شما می&zwnj;توانید پاسخ&zwnj;هایی در مورد TRAVIAN پیدا کنید. علاوه بر آن اگر قادر به پیدا کردن پاسخ سوال خود نبودید می&zwnj;توانید با پشتیبانی داخل بازی تماس بگیرید.</span></div>
+<div class="support-row"> <a class="support-head" href="http://blog.travianb.ir/" target="blank">وبلاگ</a><span style="color: black">در وبلاگ ما می توانید از اخبار سایت با خبر شوید.</span></div>
