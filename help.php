@@ -6,14 +6,8 @@
  */
 ?>
 <?php
-if(!file_exists('engine/config/admin.php')){
-	include('engine/includes/offline.php');
-	exit;
-}
-else {
-	include ('engine/config.php');
-}
-if (!$active) {
+include('engine/config.php');
+if(!file_exists('engine/config/admin.php') || !$active){
 	include('engine/includes/offline.php');
 	exit;
 }
@@ -42,18 +36,18 @@ if (!$active) {
         <div id="top-nav-menu">
           <div id="logo"> <a href="./"><img src="img/x.gif" class="logo" alt=""></a> </div>
           <ul id="top-navigation">
-            <li> <a href="index.php#tutorial">تور بازی</a> </li>
+            <li> <a href=".#tutorial">تور بازی</a> </li>
             <?php if($forum_link != ''){ ?>
             <li> <a target="_blank" href="<?php echo $forum_link ?>" id="forum">فروم</a> </li>
             <?php } ?>
-            <li> <a id="registerLink" href="index.php#register">ثبت نام</a> </li>
+            <li> <a id="registerLink" href=".#register">ثبت نام</a> </li>
           </ul>
         </div>
         <div id="top-nav-login">
           <div id="login">
             <div class="btn-green">
               <div class="btn-green-l"></div>
-              <div class="btn-green-c"> <a class="npage" href="index.php#serverLogin">ورود</a> </div>
+              <div class="btn-green-c"> <a class="npage" href=".#serverLogin">ورود</a> </div>
               <div class="btn-green-r"></div>
               <div class="clear"></div>
             </div>
@@ -115,7 +109,7 @@ if (!$active) {
     <div class="clear"></div>
   </div>
   <div id="footer-container">
-    <div id="footer"> <a class="flink" href="help.php">پشتیبانی</a>&nbsp;|&nbsp; <a target="_blank" class="flink" href="http://t4.answers.travian.ir">سوالات متداول</a>&nbsp;|&nbsp; <a class="flink" href="index.php#links">لینک‌ها</a>&nbsp;|&nbsp; <a class="flink" href="index.php#screenshots" id="screenshotp">صحنه‌های بازی</a>&nbsp;|&nbsp; <a class="flink" href="index.php#spielregeln">قوانین بازی</a>&nbsp;|&nbsp; <a class="flink" href="index.php#agb">شروط</a>&nbsp;|&nbsp; <a class="flink" href="index.php#impressum">یادداشت</a> &nbsp;|&nbsp;<a class="flink" href="http://www.traviangames.com/en/company/marketing/affiliate-partners.html" target="_blank">برنامه‌ی وابسته</a> <br/>
+    <div id="footer"> <a class="flink" href="help.php">پشتیبانی</a>&nbsp;|&nbsp; <a target="_blank" class="flink" href="http://t4.answers.travian.ir">سوالات متداول</a>&nbsp;|&nbsp; <a class="flink" href=".#links">لینک‌ها</a>&nbsp;|&nbsp; <a class="flink" href=".#screenshots" id="screenshotp">صحنه‌های بازی</a>&nbsp;|&nbsp; <a class="flink" href=".#spielregeln">قوانین بازی</a>&nbsp;|&nbsp; <a class="flink" href=".#agb">شروط</a>&nbsp;|&nbsp; <a class="flink" href=".#impressum">یادداشت</a> &nbsp;|&nbsp;<a class="flink" href="http://www.traviangames.com/en/company/marketing/affiliate-partners.html" target="_blank">برنامه‌ی وابسته</a> <br/>
     </div>
   </div>
   <div id="overlaybg"></div>

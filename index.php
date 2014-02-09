@@ -6,14 +6,8 @@
  */
 ?>
 <?php
-if(!file_exists('engine/config/admin.php')){
-	include('engine/includes/offline.php');
-	exit;
-}
-else {
-	include ('engine/config.php');
-}
-if (!$active) {
+include('engine/config.php');
+if(!file_exists('engine/config/admin.php') || !$active){
 	include('engine/includes/offline.php');
 	exit;
 }

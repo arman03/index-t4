@@ -19,14 +19,14 @@ if(isset($_POST['playerName']) && isset($_POST['password']) && isset($_POST['ema
 	if($version == 4){
 		$body .= "<input type='hidden' name='name' value='$name'/>";
 		$body .= "<input type='hidden' name='email' value='$email'/>";
-		$body .= "<input type='hidden' name='pw' value='$password'/>";	
-		$body .= "<input type='hidden' name='vid' value='$tribe'/>";	
-		$body .= "<input type='hidden' name='kid' value='$position'/>";	
-		$body .= "<input type='hidden' name='agb' value='1'/>";	
-		$body .= "<input type='hidden' name='ft' value='a1'/>";	
-		$body .= "<input type='hidden' name='s1' value='anmelden'/>";	
+		$body .= "<input type='hidden' name='pw' value='$password'/>";
+		$body .= "<input type='hidden' name='vid' value='$tribe'/>";
+		$body .= "<input type='hidden' name='kid' value='$position'/>";
+		$body .= "<input type='hidden' name='agb' value='1'/>";
+		$body .= "<input type='hidden' name='ft' value='a1'/>";
+		$body .= "<input type='hidden' name='s1' value='anmelden'/>";
 	}
-	if($version == 3){
+	elseif($version == 3){
 		$body .= "<input type='hidden' name='name' value='$name'/>";
 		$body .= "<input type='hidden' name='email' value='$email'/>";
 		$body .= "<input type='hidden' name='pwd' value='$password'/>";
@@ -35,5 +35,5 @@ if(isset($_POST['playerName']) && isset($_POST['password']) && isset($_POST['ema
 	}
 	$body .= "</form></body></html>";
 	echo $body;
-}else;
+}
 ?>
