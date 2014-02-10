@@ -12,7 +12,6 @@ if (!isset($_SESSION['username']))
 $myFile = "../../engine/config/servers.php";
 $fh = fopen($myFile, 'w') or die("can't open file");
 $stringData = '<?php
-<?php
 $server_one_name = \'\';
 $server_one_link = \'\';
 $server_one_speed = \'\';
@@ -83,7 +82,6 @@ $server_ten_reward = false;
 $server_ten_version = 3;
 $server_ten_enable = false;
 $server_ten_register = false;
-?>
 ?>';
 fwrite($fh, $stringData);
 fclose($fh);
