@@ -1,3 +1,4 @@
 <?php
 $confirmation = '';
+$esra = false;
 ?>

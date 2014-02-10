@@ -13,6 +13,7 @@ $myFile = "../../engine/config/confirmation.php";
 $fh = fopen($myFile, 'w') or die("can't open file");
 $stringData = '<?php
 $confirmation = \'\';
+$esra = false;
 ?>';
 fwrite($fh, $stringData);
 fclose($fh);

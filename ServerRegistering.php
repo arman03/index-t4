@@ -1,6 +1,6 @@
 ﻿<?php
-include("engine/config.php");
 if(isset($_POST['playerName']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['server'])){
+	include("engine/config.php");
 	echo 'Please wait...';
 	$name = $_POST['playerName'];
 	$password = $_POST['password'];

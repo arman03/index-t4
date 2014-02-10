@@ -34,7 +34,7 @@ date_default_timezone_set('Asia/Tehran');
       <div id="country_select"> </div>
       <div id="top-nav">
         <div id="top-nav-menu">
-          <div id="logo"> <a href=""><img src="img/x.gif" class="logo" alt=""></a> </div>
+          <div id="logo"> <a href="."><img src="img/x.gif" class="logo" alt=""></a> </div>
           <ul id="top-navigation">
             <li> <a href="#tutorial" class="popcon">تور بازی</a> </li>
             <?php if($forum_link != ''){ ?>
@@ -88,15 +88,9 @@ date_default_timezone_set('Asia/Tehran');
 				}
 				if ($news_active) 
 					include ('engine/includes/news.php');
-				if ($confirmation != '')
+				if ($confirmation != '' || $esra == true)
 				{
-				?>
-      <div id="gameRating">
-        <div id="gameRatingHead"></div>
-        <div id="gameRatingContent"> <?php echo $confirmation; ?> </div>
-        <div id="gameRatingBottom"></div>
-      </div>
-      <?php
+					include ('engine/includes/confirmation.php');
 				}
 				?>
     </div>

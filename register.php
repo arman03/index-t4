@@ -16,7 +16,8 @@ include("engine/config.php");
 			for ($i = 1; $i <= 10; $i++) {
 			include ('engine/includes/number.php');
 			$enable = "$number"."_enable";$enable = $$enable;
-			if($enable){
+			$register = "$number"."_register";$register = $$register;
+			if($enable && $register){
 			$name = "$number"."_name";$name = $$name;
 			$speed = "$number"."_speed";$speed = $$speed;
 			$reward = "$number"."_reward";$reward = $$reward;
@@ -46,21 +47,21 @@ include("engine/config.php");
           <tr>
             <th class="playerName"><label for="playerName">نام اکانت:</label></th>
             <td class="spacer">&nbsp;</td>
-            <td class="playerName"><input id="playerName" class="text" name="playerName" onfocus="Travian.Main.Registration.showInfoString('حداقل 3 حرف', 'playerNameInfo')" onblur="Travian.Main.Registration.hideInfoString('playerNameInfo')" type="text">
+            <td class="playerName"><input name="playerName" type="text" required class="text" id="playerName" onfocus="Travian.Main.Registration.showInfoString('حداقل 3 حرف', 'playerNameInfo')" onblur="Travian.Main.Registration.hideInfoString('playerNameInfo')">
               <br>
               <div class="error" id="playerNameInfo"></div></td>
           </tr>
           <tr>
             <th class="password"><label for="registerPassword">رمز عبور:</label></th>
             <td class="spacer">&nbsp;</td>
-            <td class="password"><input id="registerPassword" class="text" name="password" onfocus="Travian.Main.Registration.showInfoString('حداقل 4 حرف و باید متفاوت با نام اکانت باشد.', 'passwordInfo')" onblur="Travian.Main.Registration.hideInfoString('passwordInfo')" type="password">
+            <td class="password"><input name="password" type="password" required class="text" id="registerPassword" onfocus="Travian.Main.Registration.showInfoString('حداقل 4 حرف و باید متفاوت با نام اکانت باشد.', 'passwordInfo')" onblur="Travian.Main.Registration.hideInfoString('passwordInfo')">
               <br>
               <div class="error" id="passwordInfo"></div></td>
           </tr>
           <tr>
             <th class="email"><label for="email">آدرس ایمیل:</label></th>
             <td class="spacer">&nbsp;</td>
-            <td class="email"><input id="email" class="text" name="email" onfocus="Travian.Main.Registration.showInfoString('برای فعال سازی به آدرس ایمیل نیاز است.', 'emailInfo')" onblur="Travian.Main.Registration.hideInfoString('emailInfo')" type="text">
+            <td class="email"><input name="email" type="email" required class="text" id="email" onfocus="Travian.Main.Registration.showInfoString('برای فعال سازی به آدرس ایمیل نیاز است.', 'emailInfo')" onblur="Travian.Main.Registration.hideInfoString('emailInfo')">
               <br>
               <input name="server" id="server" type="hidden" value=''/>
               <div class="error" id="emailInfo"></div></td>
@@ -115,7 +116,7 @@ include("engine/config.php");
             <th class="generalTermsAndConditions"></th>
             <td class="spacer">&nbsp;</td>
             <td class="generalTermsAndConditions"><div class="checkboxfield">
-                <input id="generalTermsAndConditions" class="check" name="generalTermsAndConditions" value="1" type="checkbox">
+                <input name="generalTermsAndConditions" type="checkbox" required class="check" id="generalTermsAndConditions" value="1">
                 <label for="generalTermsAndConditions">من <a href="#spielregeln" target="_blank">قوانین 
                   بازی</a> و <a href="./#agb" target="_blank">ضوابط و شرایط 
                   عمومی</a> را قبول می‌کنم.</label>

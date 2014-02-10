@@ -27,7 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'sumbitform')
    $myFile = "../engine/config/confirmation.php";
    $fh = fopen($myFile, 'w') or die("can't open file");
    $stringData = '<?php
-$confirmation = \''.$_POST['confirmation'].$_POST['esra'].'\';
+$confirmation = \''.$_POST['confirmation'].'\';
+$esra = '.$_POST['esra'].';
 ?>';
    fwrite($fh, $stringData);
    fclose($fh);
@@ -45,7 +46,10 @@ $confirmation = \''.$_POST['confirmation'].$_POST['esra'].'\';
 </p>
 </body>
 </html>
-<?php exit; }?>
+<?php
+exit; }
+include('../engine/config/confirmation.php');
+?>
 <!doctype html>
 <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 <html dir="rtl">
@@ -66,19 +70,20 @@ $confirmation = \''.$_POST['confirmation'].$_POST['esra'].'\';
 <h3>اعتبارات:</h3>
 <form action="<?php echo basename(__FILE__); ?>" method="post" name="confirmation" id="confirmation">
   <p>
-    <label for="confirmation">متن:</label>
-    <textarea class="ckeditor" name="confirmation" id="confirmation"></textarea>
-    <input name="form_name" type="hidden" id="form_name" value="sumbitform">
+    <label for="confirmation">
+ متن:</label>
+    <textarea class="ckeditor" name="confirmation" id="confirmation"><?php echo $confirmation ?></textarea>
   </p>
   <p>
-    <label> esra :
-      <input type="radio" name="esra" id="esra" value="&lt;img class=&quot;logo&quot; src=&quot;img/x.gif&quot; alt=&quot;ستاد ساماندهی&quot; /&gt;ثبت شده در ستاد ساماندهی پایگاه&zwnj;های اینترنتی کشور" checked>
+    <label>esra :
+      <input type="radio" name="esra" id="esra" value="true" <?php if($esra){ ?> checked <?php } ?>>
       فعال</label>
     <label>
-      <input type="radio" name="esra" id="esra" value="">
+      <input name="esra" type="radio" id="esra" value="false" <?php if(!$esra){ ?> checked <?php } ?>>
       غیرفعال</label>
   </p>
   <p>
+    <input name="form_name" type="hidden" id="form_name" value="sumbitform">
     <input name="submit" type="submit" id="submit" value="ثبت">
   </p>
 </form>

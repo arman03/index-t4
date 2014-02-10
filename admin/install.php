@@ -3,14 +3,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'installform'
 {
    if($_POST['password'] != $_POST['confirmpassword'])
    { ?>
-<p dir="rtl" style="color:red">رمز و تاییدیه آن باید یکی باشند.</p>
+<p dir="rtl" style="color:red">رمز و تاییدیه آن باید یکی باشند. </p>
 <?php }
    else
    {
       $myFile = "../engine/config/admin.php";
       $fh = fopen($myFile, 'w') or die("can't open file");
       $stringData = '<?php
-$username = \''.$_POST['username'].'\';
+$username = \''.$_POST['newusername'].'\';
 $password = \''.md5($_POST['newpassword']).'\';
 ?>';
       fwrite($fh, $stringData);
@@ -30,8 +30,7 @@ $password = \''.md5($_POST['newpassword']).'\';
   <input onclick="window.open('.')" type="button" name="button" id="button" value="ادمین پنل">
 </p>
 </body>
-</html>
-<?php
+</html><?php
 	  unlink('install.php');
 	  exit;
    }
