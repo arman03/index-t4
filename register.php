@@ -6,7 +6,7 @@ include("engine/config.php");
 <div class="greenbox serverListBox" id="maindiv">
   <div class="greenbox-top"></div>
   <div class="greenbox-content">
-  <form name="registration" id="registration" action="ServerRegistering.php" method='POST'>
+  <form name="registration" id="registration" action="serverRegistering.php" method='POST'>
     <div id="registrationForm" class="registrationForm">
       <div class="serverList">
         <div class="subContent" id="otherServers">

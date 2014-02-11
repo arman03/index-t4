@@ -1,6 +1,6 @@
 <?php
 $mysql_server = '';
-$stats_servers = 0;
+$stats_servers = '0';
 $stats_server1 = array('','','','');
 $stats_server2 = array('','','','');
 $stats_server3 = array('','','','');
