@@ -52,12 +52,9 @@ include('../engine/config/confirmation.php');
 ?>
 <!doctype html>
 <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-<html dir="rtl">
-<head>
 <meta charset="utf-8">
 <title>کنترل پنل ادمین</title>
-</head>
-<body>
+<body dir="rtl">
 <form action="<?php echo basename(__FILE__); ?>" method="post" name="logoutform" id="logoutform">
   <p>
     <input type="submit" name="logout'" id="logout'" value="خروج">

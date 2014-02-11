@@ -51,6 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'loginform')
     <input type="submit" name="login" id="login" value="ورود">
   </p>
 </form>
-<p>طراحی شده توسط سیاوش بامشادنیا</p>
+<p>برنامه نویسی شده توسط سیاوش بامشادنیا</p>
 </body>
 </html>

@@ -66,7 +66,7 @@ $password = \''.md5($_POST['newpassword']).'\';
     <input name="install" type="submit" id="install" value="نصب ایندکس">
   </p>
   <p>برنامه نویسی شده توسط سیاوش بامشادنیا (amtr)</p>
-  <p>تغییر نام برنامه نویس، شرعا حرا می باشد.</p>
+  <p>تغییر نام برنامه نویس، شرعا حرام می باشد.</p>
 </form>
 </body>
 </html>

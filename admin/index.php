@@ -66,6 +66,6 @@ if (session_id() == "")
 <p>
   <input onClick="window.location='reset.php'" type="button" name="reset" id="reset" value="ریست ایندکس">
 </p>
-<p>طراحی شده توسط سیاوش بامشادنیا</p>
+<p>برنامه نویسی شده توسط سیاوش بامشادنیا</p>
 </body>
 </html>
