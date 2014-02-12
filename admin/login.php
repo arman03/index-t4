@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'loginform')
    {
       session_start();
    }
-   if($_POST['username'] == $username && $_POST['password'])
+   if($_POST['username'] == $username && md5($_POST['password']) == $password)
    {
       $_SESSION['username'] = $_POST['username'];
       $rememberme = isset($_POST['rememberme']) ? true : false;
