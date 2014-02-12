@@ -10,8 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'installform'
       $myFile = "../engine/config/admin.php";
       $fh = fopen($myFile, 'w') or die("can't open file");
       $stringData = '<?php
-$username = \''.$_POST['newusername'].'\';
-$password = \''.md5($_POST['newpassword']).'\';
+$username = \''.$_POST['username'].'\';
+$password = \''.md5($_POST['password']).'\';
 ?>';
       fwrite($fh, $stringData);
       fclose($fh);
